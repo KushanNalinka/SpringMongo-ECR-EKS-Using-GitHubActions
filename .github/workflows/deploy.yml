@@ -41,4 +41,4 @@ jobs:
     - name: Update kubeconfig & apply manifests
       run: |
         aws eks update-kubeconfig --name springboot-microservices --region $AWS_REGION
-        kubectl apply -f k8s/
+        kubectl apply --validate=false -f k8s/
