@@ -10,7 +10,7 @@ spec:
     spec:
       containers:
         - name: inventory-service
-          image: ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_REGION }}.amazonaws.com/inventory-service:latest
+          image: 630288222109.dkr.ecr.us-east-1.amazonaws.com/inventory-service:latest
           ports:
             - containerPort: 8083
           env:
