@@ -6,6 +6,6 @@ RUN mvn clean package -DskipTests
 
 FROM openjdk:17-slim
 WORKDIR /app
-COPY --from=build /app/target/product-service-0.0.1-SNAPSHOT.jar ./product-service.jar
+COPY --from=build /app/target/inventory-service-0.0.1-SNAPSHOT.jar ./inventory-service.jar
 EXPOSE 8081
 ENTRYPOINT ["java","-jar","inventory-service.jar"]
