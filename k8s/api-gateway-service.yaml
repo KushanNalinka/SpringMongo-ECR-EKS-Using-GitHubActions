@@ -5,6 +5,10 @@ metadata:
 spec:
   selector: { app: api-gateway }
   ports:
-    - port: 8080
+    - name: http              # <— give the external port a name
+      port: 80
+      targetPort: 8080
+    - name: internal-http     # <— name your second port, too
+      port: 8080
       targetPort: 8080
   type: LoadBalancer
